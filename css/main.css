@@ -213,6 +213,10 @@ a {
 .form-field:not(:last-child) {
   margin-bottom: 10px;
 }
+.form-field .form__input:focus, .form-field textarea:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
 
 .form__input {
   width: 100%;
@@ -225,14 +229,6 @@ a {
   cursor: pointer;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form__input:focus + .icon-modal__form {
-  fill: var(--accent-color);
-}
-.form__input:focus,
-.form__input .form-field textarea:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
 }
 .form__input textarea::-webkit-input-placeholder {
   font-size: 12px;
@@ -263,6 +259,9 @@ a {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.form__input:focus + .icon-modal__form {
+  fill: var(--accent-color);
 }
 
 .icon-modal__form {
