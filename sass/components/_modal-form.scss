@@ -81,26 +81,13 @@ textarea {
   cursor: pointer;
 }
 
-.checkbox__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-
-  &:checked + .icon__span {
-    background-color: var(--accent-color);
-    background-image: url("../images/icons/icon-check-blue.svg");
-    background-size: contain;
-    background-origin: border-box;
-    border-color: var(--accent-color);
-    background-repeat: no-repeat;
-  }
+.visually-hidden:checked + .icon__span {
+  background-color: var(--accent-color);
+  background-image: url("../images/icons/icon-check-blue.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  background-repeat: no-repeat;
 }
 
 .icon__span {

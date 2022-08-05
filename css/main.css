@@ -17,6 +17,20 @@
   --bg-modal: rgba(0, 0, 0, 0.2);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*
 ДРУГИЙ ПАРШАЛ
 */
@@ -293,20 +307,7 @@ textarea {
   cursor: pointer;
 }
 
-.checkbox__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.checkbox__input:checked + .icon__span {
+.visually-hidden:checked + .icon__span {
   background-color: var(--accent-color);
   background-image: url("../images/icons/icon-check-blue.svg");
   background-size: contain;
